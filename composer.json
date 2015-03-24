@@ -1,0 +1,35 @@
+{
+    "name": "ev/ev-powerpoint-bundle",
+    "type": "symfony-bundle",
+    "description": "This is a Symfony2 Bundle helps you to read and write PowerPoint files, thanks to the PHPPowerPoint library",
+    "keywords": ["powerpoint", "phpoffice", "pptx", "ppt", "odp", "presentations", "bundle"],
+    "homepage": "http://github.com/evalandgo/EVPowerPointBundle",
+    "license": "MIT",
+    
+    "authors": [
+        {
+            "name": "Evalandgo Team",
+            "homepage": "http://evalandgo.com"
+        }
+    ],
+
+    "require": {
+        "php":                          ">=5.3.3",
+        "symfony/framework-bundle":     "~2.0",
+        "phpoffice/phppowerpoint":     "~0.3.0"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "EV\\PowerPointBundle": ""
+        }
+    },
+
+    "target-dir": "EV/PowerPointBundle",
+    
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
