@@ -1,1 +1,1 @@
-TODO : créer doc de PowerPointFactory + readme.md
+TODO : créer doc de PowerPointFactory + readme.md + ajouter à packagist
