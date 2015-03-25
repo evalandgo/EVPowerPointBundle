@@ -13,20 +13,6 @@
         }
     ],
             
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "phpoffice/phppowerpoint",
-                "version": "0.3.0",
-                "dist": {
-                    "url": "https://github.com/PHPOffice/PHPPowerPoint/archive/0.3.0.zip",
-                    "type": "zip"
-                }
-            }
-        }
-    ],
-
     "require": {
         "php":                          ">=5.3.3",
         "symfony/framework-bundle":     "~2.0",
