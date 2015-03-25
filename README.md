@@ -1,5 +1,3 @@
-# TODO : 
-- Packagist
 
 # EVPowerPointBundle
 This is a Symfony2 Bundle helps you to read and write PowerPoint files, thanks to the PHPPowerPoint library
@@ -12,12 +10,6 @@ This is a Symfony2 Bundle helps you to read and write PowerPoint files, thanks t
 In composer.json file, add :
 ```json
 {
-    "repositories": [
-        {
-            "type": "git",
-            "url":  "git@github.com:evalandgo/EVPowerPointBundle.git"
-        }
-    ],
     "require": {
         "phpoffice/phppowerpoint": "dev-master",
         "ev/ev-powerpoint-bundle": "1.0.*@dev"
