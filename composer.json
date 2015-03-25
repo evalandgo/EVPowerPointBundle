@@ -21,11 +21,9 @@
 
     "autoload": {
         "psr-4": {
-            "EV\\PowerPointBundle": ""
+            "EV\\PowerPointBundle\\": ""
         }
     },
-
-    "target-dir": "EV/PowerPointBundle",
     
     "extra": {
         "branch-alias": {
