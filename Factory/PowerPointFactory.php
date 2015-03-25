@@ -102,11 +102,11 @@ class PowerPointFactory {
         if ( isset($options['auto_headers']) && $options['auto_headers'] === true && isset($options['filename']) ) {
             
             if ( $writer instanceof ODPresentation ) {
-                $response->headers->set('Content-Type', 'text/vnd.ms-powerpoint; charset=utf-8');
+                $response->headers->set('Content-Type', 'application/vnd.oasis.opendocument.presentation; charset=utf-8');
                 $response->headers->set('Content-Disposition', 'attachment;filename='.$options['filename'].'.odp');
             }
             else if ( $writer instanceof PowerPoint2007 ) {
-                $response->headers->set('Content-Type', 'application/vnd.oasis.opendocument.presentation; charset=utf-8');
+                $response->headers->set('Content-Type', 'text/vnd.ms-powerpoint; charset=utf-8');
                 $response->headers->set('Content-Disposition', 'attachment;filename='.$options['filename'].'.pptx');
             }
             else {
