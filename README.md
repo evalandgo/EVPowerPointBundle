@@ -1,4 +1,5 @@
-TODO : créer doc de PowerPointFactory + readme.md + ajouter à packagist
+# TODO : 
+- Packagist
 
 # EVPowerPointBundle
 This is a Symfony2 Bundle helps you to read and write PowerPoint files, thanks to the PHPPowerPoint library
@@ -11,8 +12,15 @@ This is a Symfony2 Bundle helps you to read and write PowerPoint files, thanks t
 In composer.json file, add :
 ```json
 {
+    "repositories": [
+        {
+            "type": "git",
+            "url":  "git@github.com:evalandgo/EVPowerPointBundle.git"
+        }
+    ],
     "require": {
-        "ev/ev-powerpoint-bundle": "dev-master"
+        "phpoffice/phppowerpoint": "dev-master",
+        "ev/ev-powerpoint-bundle": "1.0.*@dev"
     }
 }
 ```
@@ -41,21 +49,10 @@ public function powerpointAction() {
       
     $powerPointFactory = $this->get('ev_powerpoint');
         
-    $objPowerPoint = new PhpPowerpoint();
+    $objPowerPoint = $powerPointFactory->createPHPPowerPoint();
 
     // Create slide
     $currentSlide = $objPowerPoint->getActiveSlide();
-
-    // Create a shape (drawing)
-    $shape = $currentSlide->createDrawingShape();
-    $shape->setName('PHPPowerPoint logo')
-          ->setDescription('PHPPowerPoint logo')
-          ->setHeight(36)
-          ->setOffsetX(10)
-          ->setOffsetY(10);
-    $shape->getShadow()->setVisible(true)
-                       ->setDirection(45)
-                       ->setDistance(10);
 
     // Create a shape (text)
     $shape = $currentSlide->createRichTextShape()
@@ -63,7 +60,7 @@ public function powerpointAction() {
           ->setWidth(600)
           ->setOffsetX(170)
           ->setOffsetY(180);
-    $textRun = $shape->createTextRun('Thank you for using PHPPowerPoint!');
+    $textRun = $shape->createTextRun('Thank you for using EVPowerPointBundle!');
     $textRun->getFont()->setBold(true)
                        ->setSize(60)
                        ->setColor( new Color( 'FFE06B20' ) );
