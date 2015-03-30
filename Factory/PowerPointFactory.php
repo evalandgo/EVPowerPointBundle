@@ -27,7 +27,7 @@ class PowerPointFactory {
      * @param type $name
      * @param type $properties
      */
-    public function createObject($name, $properties) {
+    public function createObject($name, $properties = array()) {
         $class = 'PhpOffice\\PhpPowerpoint\\'.$name;
         
         $object = new $class();
@@ -43,7 +43,7 @@ class PowerPointFactory {
      * @param type $properties
      * @return type
      */
-    public function createShape($name, $properties) {
+    public function createShape($name, $properties, $properties = array()) {
         return $this->createObject('Sharpe\\'.$name, $properties);
     }
     
@@ -53,7 +53,7 @@ class PowerPointFactory {
      * @param type $properties
      * @return type
      */
-    public function createShared($name, $properties) {
+    public function createShared($name, $properties, $properties = array()) {
         return $this->createObject('Shared\\'.$name, $properties);
     }
     
@@ -63,7 +63,7 @@ class PowerPointFactory {
      * @param type $properties
      * @return type
      */
-    public function createStyle($name, $properties) {
+    public function createStyle($name, $properties, $properties = array()) {
         return $this->createObject('Style\\'.$name, $properties);
     }
     
