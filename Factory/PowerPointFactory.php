@@ -45,7 +45,7 @@ class PowerPointFactory {
      * @param type $properties
      * @return type
      */
-    public function createShape($name, $properties, $properties = array()) {
+    public function createShape($name, $properties = array()) {
         return $this->createObject('Sharpe\\'.$name, $properties);
     }
     
@@ -55,7 +55,7 @@ class PowerPointFactory {
      * @param type $properties
      * @return type
      */
-    public function createShared($name, $properties, $properties = array()) {
+    public function createShared($name, $properties = array()) {
         return $this->createObject('Shared\\'.$name, $properties);
     }
     
@@ -65,7 +65,7 @@ class PowerPointFactory {
      * @param type $properties
      * @return type
      */
-    public function createStyle($name, $properties, $properties = array()) {
+    public function createStyle($name, $properties = array()) {
         return $this->createObject('Style\\'.$name, $properties);
     }
     
