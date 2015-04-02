@@ -35,6 +35,8 @@ class PowerPointFactory {
             $method = 'set'.ucfirst($property);
             $object->$method($value);
         }
+        
+        return $object;
     }
     
     /**
