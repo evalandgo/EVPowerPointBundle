@@ -16,7 +16,7 @@ class PowerPointFactory {
     
     /**
      * 
-     * @return \PhpOffice\PhpPowerpoint\PhpPowerpoint
+     * @return \PhpOffice\PhpPresentation\PhpPowerpoint
      */
     public function createPHPPowerPoint() {
         return new PhpPresentation();
@@ -71,17 +71,17 @@ class PowerPointFactory {
     
     /**
      * 
-     * @param \PhpOffice\PhpPowerpoint\PhpPowerpoint $objPowerPoint
+     * @param \PhpOffice\PhpPresentation\PhpPowerpoint $objPowerPoint
      * @param String $format
-     * @return \PhpOffice\PhpPowerPoint\Writer\Writerinterface
+     * @return \PhpOffice\PhpPresentation\Writer\Writerinterface
      */
-    public function createWriter(PhpPowerpoint $objPowerPoint, $format = 'PowerPoint2007') {
+    public function createWriter(PhpPresentation $objPowerPoint, $format = 'PowerPoint2007') {
         return IOFactory::createWriter($objPowerPoint, $format);
     }
     
     /**
      * 
-     * @param \PhpOffice\PhpPowerPoint\Writer\Writerinterface $writer
+     * @param \PhpOffice\PhpPresentation\Writer\Writerinterface $writer
      * @return \Symfony\Component\HttpFoundation\StreamedResponse
      */
     public function createStreamedResponse(Writerinterface $writer) {
@@ -92,7 +92,7 @@ class PowerPointFactory {
     
     /**
      * 
-     * @param \PhpOffice\PhpPowerPoint\Writer\Writerinterface $writer
+     * @param \PhpOffice\PhpPresentation\Writer\Writerinterface $writer
      * @param Array $options
      * @return \Symfony\Component\HttpFoundation\StreamedResponse
      * @throws \Exception
