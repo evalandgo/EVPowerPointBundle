@@ -2,11 +2,11 @@
 
 namespace EV\PowerPointBundle\Factory;
 
-use PhpOffice\PhpPowerpoint\PhpPowerpoint;
-use PhpOffice\PhpPowerpoint\IOFactory;
-use PhpOffice\PhpPowerPoint\Writer\Writerinterface;
-use PhpOffice\PhpPowerPoint\Writer\PowerPoint2007;
-use PhpOffice\PhpPowerPoint\Writer\ODPresentation;
+use PhpOffice\PhpPresentation\PhpPresentation;
+use PhpOffice\PhpPresentation\IOFactory;
+use PhpOffice\PhpPresentation\Writer\Writerinterface;
+use PhpOffice\PhpPresentation\Writer\PowerPoint2007;
+use PhpOffice\PhpPresentation\Writer\ODPresentation;
 
 
 use Symfony\Component\HttpFoundation\StreamedResponse;
@@ -19,7 +19,7 @@ class PowerPointFactory {
      * @return \PhpOffice\PhpPowerpoint\PhpPowerpoint
      */
     public function createPHPPowerPoint() {
-        return new PhpPowerpoint();
+        return new PhpPresentation();
     }
     
     /**
@@ -28,7 +28,7 @@ class PowerPointFactory {
      * @param type $properties
      */
     public function createObject($name, $properties = array()) {
-        $class = 'PhpOffice\\PhpPowerpoint\\'.$name;
+        $class = 'PhpOffice\\PhpPresentation\\'.$name;
         
         $object = new $class();
         foreach($properties as $property => $value) {
