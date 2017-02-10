@@ -108,8 +108,9 @@ class PowerPointFactory {
                 $response->headers->set('Content-Disposition', 'attachment;filename='.$options['filename'].'.odp');
             }
             else if ( $writer instanceof PowerPoint2007 ) {
-                $response->headers->set('Content-Type', 'text/vnd.ms-powerpoint; charset=utf-8');
-                $response->headers->set('Content-Disposition', 'attachment;filename='.$options['filename'].'.ppt');
+                //$response->headers->set('Content-Type', 'text/vnd.ms-powerpoint; charset=utf-8');
+                $response->headers->set('Content-Type', 'application/vnd.openxmlformats-officedocument.presentationml.presentation; charset=utf-8');
+                $response->headers->set('Content-Disposition', 'attachment;filename='.$options['filename'].'.pptx');
             }
             else {
                 throw new \Exception("'auto_headers' option can't be used with this Writer. Only ODPPresentation and PowerPoint2007 are allowed");
