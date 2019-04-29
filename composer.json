@@ -15,7 +15,6 @@
             
     "require": {
         "php":                          ">=5.3.3",
-        "symfony/framework-bundle":     "~2.0",
         "phpoffice/phppresentation": "0.6.0"
     },
 
